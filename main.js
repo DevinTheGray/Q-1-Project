@@ -20,4 +20,10 @@ $(document).ready(function() {
    console.log(event.target.innerHTML);
  })
 
- 
+// For customer input
+ $(document).ready(function() {
+    Materialize.updateTextFields();
+  });
+
+  $('#textarea1').val('');
+$('#textarea1').trigger('autoresize');

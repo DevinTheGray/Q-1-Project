@@ -1,33 +1,7 @@
 var climate,terrain=""
-var returnedPlanets
+var returnedPlanets=[]
 var matchClimate=[]
 var matchTerrain=[]
-function displayPlanet(){
-  if(climate && terrain){
-    var url="http://swapi.co/api/planets"
-    $.get(url)
-
-    .then(function(data){
-      // console.log(data)
-      for (var i = 0; i < data.results.length; i++) {
-        // console.log(data.results[i].name)
-        if(climate===data.results[i].climate && terrain===data.results[i].terrain){
-          // console.log(data.results[i].name)
-
-          returnedPlanets = data.results[i].name;
-          var planet = returnedPlanets
-          document.querySelector('#planetHere').textContent = "Vacation on: " + planet
-          return data.results[i].name;
-        }
-
-
-      }
-
-      return "Nothing matched that search, try again!"
-    })
-  }
-
-}
 
 $(document).ready(function() {
     Materialize.updateTextFields();
@@ -43,29 +17,16 @@ $(document).ready(function() {
 
   $('#dropdown2').click(function(event){
     matchTerrain=[]
-    // console.log(event.target.innerHTML);
     document.querySelector('#secondText').textContent = "selected terrain: "
     document.querySelector('#secondText').append(event.target.innerHTML);
     terrain=event.target.innerHTML
-    searchTerrain()
+    searchTerrain(terrain)
   })
 
   $('#findPlanet').click(function(event){
-    displayPlanet()
-    // console.log(returnedPlanets);
-    var planet = returnedPlanets
-    document.querySelector('#planetHere').textContent = "Vacation on: " + planet
-
-
-
+    matchedPlanets(matchClimate, matchTerrain)
   })
 })
-
-//get planet function
-
-
-
-
 
 // get climate function
 function searchClimate(climate) {
@@ -77,7 +38,9 @@ function searchClimate(climate) {
       var climateData= data.results[i].climate.split(", ");
       for (var j = 0; j < climateData.length; j++) {
         if (climateData[j] === climate) {
+
           matchClimate.push(data.results[i].name)
+          console.log("NAME? " + data.results[i].name)
         } else {
           console.log("no match")
         }
@@ -87,32 +50,46 @@ function searchClimate(climate) {
   })
 }
 
-
-
-
-
-
-
-    // var name = data.results.length
-    // console.log(name)
-    // updatePageOne(name, tagline)
-//   })
-// }
-//get terrain function
-
 function searchTerrain() {
   var url = "http://swapi.co/api/planets"
   $.get(url)
   .then(function(data){
+    console.log(data)
     for (var i = 0; i < data.results.length; i++) {
-      // console.log(data.results[i].terrain);
-
+      var terrainData= data.results[i].terrain.split(", ");
+      for (var j = 0; j < terrainData.length; j++) {
+        if (terrainData[j] === terrain) {
+          matchTerrain.push(data.results[i].name)
+          console.log("NAME? " + data.results[i].name)
+        } else {
+          console.log("no match")
+        }
+      }
     }
-    var name= data.results.length
+          console.log("Matching Terrains: " +matchTerrain)
   })
 }
 
+function matchedPlanets(matchClimate, matchTerrain){
+  console.log("matchTerrain looks like: " + matchTerrain)
+  console.log("matchClimate looks like: " + matchClimate)
+  for(var i=0; i<matchClimate.length;i++){
+    for(var j=0; j<matchTerrain.length; j++){
+      if (matchClimate[i]===matchTerrain[j]){
+        returnedPlanets.push(matchClimate[i])
+      }
+    }
+  }
+  if (returnedPlanets.length>=1){
+    console.log("returned planets "+ returnedPlanets)
+    document.querySelector('#planetHere').textContent = "Vacation on: "
+    document.querySelector('#planetHere').append(returnedPlanets.toString(", "))
+  }else {
+    console.log("vacation elsewhere")
+  }
 
+
+}
 
 // For customer input
 

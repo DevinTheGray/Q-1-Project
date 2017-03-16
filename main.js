@@ -1,27 +1,57 @@
-console.log("js connected!");
-
-
 
 $(document).ready(function() {
+  $('#dropdown1').click(function(event){
+    console.log(event.target.innerHTML);
+    document.querySelector('#textFieldId').textContent = "selected climate: "
+    document.querySelector('#textFieldId').append(event.target.innerHTML);
+    searchClimate()
+  })
 
-   $('select').material_select();
-
+  $('#dropdown2').click(function(event){
+    console.log(event.target.innerHTML);
+    document.querySelector('#secondText').textContent = "selected terrain: "
+    document.querySelector('#secondText').append(event.target.innerHTML);
+    searchTerrain()
+  })
 
 
 
  });
-// click climate
- $('#dropdown1').click(function(event){
-   console.log(event.target.innerHTML);
-   document.querySelector('#textFieldId').textContent = "selected climate: "
-   document.querySelector('#textFieldId').append(event.target.innerHTML);
- })
-// click terrain
- $('#dropdown2').click(function(event){
-   console.log(event.target.innerHTML);
-   document.querySelector('#secondText').textContent = "selected climate: "
-   document.querySelector('#secondText').append(event.target.innerHTML);
- })
+
+// get climate function
+function searchClimate() {
+  var url = "http://swapi.co/api/planets"
+  $.get(url)
+  .then(function(data){
+    for (var i = 0; i < data.results.length; i++) {
+      console.log(data.results[i].climate);
+
+    }
+
+
+
+
+
+    var name = data.results.length
+    // console.log(name)
+    // updatePageOne(name, tagline)
+  })
+}
+//get terrain function
+
+function searchTerrain() {
+  var url = "http://swapi.co/api/planets"
+  $.get(url)
+  .then(function(data){
+    for (var i = 0; i < data.results.length; i++) {
+      console.log(data.results[i].terrain);
+
+    }
+    var name= data.results.length
+  })
+}
+
+
 
 // For customer input
  $(document).ready(function() {

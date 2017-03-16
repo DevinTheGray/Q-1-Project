@@ -8,37 +8,76 @@
   </head>
   <body>
 
+    <nav>
+      <div class="nav-wrapper black">
+        <a href="#" class="brand-logo center"><span class="yellow-text text-accent-2">Traveling through hyperspace ain't like dusting crops, farm boy.</a></span>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        </ul>
+      </div>
+    </nav>
+
     <div class="row">
-    <form class="col s12">
+    </div>
+
+
+
+
+<!-- form set to clear whole page -->
+<form>
+    <div class="row">
+    <section class="col s12">
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix"><!-- Luke Skywalker icon by Icons8 -->
 <img class="icon icons8-Luke-Skywalker" src="data:image/png;base64,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" width="48" height="48"></i>
           <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">Name</label>
+          <label for="icon_prefix">First Name</label>
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix"><!-- Lightsaber icon by Icons8 -->
-<img class="icon icons8-Lightsaber" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACU0lEQVRoQ2NkGOKAcYi7n2HUAwMdg6MxQMsY+H92bwLD///9UDsSGU1cNqDbN2hjAOz4b5/nM0wtZmDg4GFgyOl9wGjiojgkPIDi+Kd3GRiU9UEeeMho4qIw6D2A4XgpZZDjGRg4eQIHfRLC6Xgu3kRGY+cF2PLboMkD5Dge5KFB4QFyHT8oPECJ4wfcA5Q6fkA9QA3HD5gHqOX4AfEANR1Pdw9Q2/F09QAtHE83D9DK8XTxAC0dT3MP0NrxNPUAPRxPMw/Qy/E08QA9HU91D9Db8VT1wEA4nmoeaK4sn1PjZZkM7oCD+rCwbiCenhS1RjMo7tCAHL/l3I3kE4JX6O54imMA5niQQSe+baRryMNikOwYqKuuXrHzzJVwmEEnBK5ARg/okGyQkx9ZHti2acOkHedu5p48fgxu1omaRLo7nqQkZObmt4CRkfF/RFzcQcb/jPNBmu/duc0A88SJtjycQx/UyrBkD6tAHR8PMoCHl5fBNyAIbhbIEwK/P61sam2NoKVDcZlNVBIyd/ebwMDAmA8zBNkTWgIsc918/FIGwvFEJ6HwzMI59+/eTWZkhPj3////DEoqKgzm1taJhdHBWEfM6OUhgjEAcvyDe/eSYQ4H+5qRkUFBSWnuyun9AxbyRBWjyI5HDtHB4ni8SWgoOB6nB4aK43F6wC8+897LF89QZkMGU7IhWBP3L1534OSxI/b3790Fqx2sjscZA/1L1xsw/Ps/Yf+e3XKcXBz7BkNpQ1FFRq8ynRx7CNYD5BhKTz2jHqBnaJPdGh1oR+KzHwB05YZAeHJ4wwAAAABJRU5ErkJggg==" width="48" height="48"></i>
+            <!-- Darth Vader icon by Icons8 -->
+            <img class="icon icons8-Darth-Vader" src="data:image/png;base64,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" width="48" height="48"></i>
           <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone">Telephone</label>
+          <label for="icon_telephone">Last Name</label>
         </div>
       </div>
-    </form>
+    </section>
   </div>
+
+
+<div class="row">
+  <div class="col s6">
+<input type="date" class="datepicker" placeholder="When did you return home from your vacation?"></div>
+<div class="input-field col s6">
+  <i class="material-icons prefix"><!-- Lightsaber icon by Icons8 -->
+<img class="icon icons8-Lightsaber" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACU0lEQVRoQ2NkGOKAcYi7n2HUAwMdg6MxQMsY+H92bwLD///9UDsSGU1cNqDbN2hjAOz4b5/nM0wtZmDg4GFgyOl9wGjiojgkPIDi+Kd3GRiU9UEeeMho4qIw6D2A4XgpZZDjGRg4eQIHfRLC6Xgu3kRGY+cF2PLboMkD5Dge5KFB4QFyHT8oPECJ4wfcA5Q6fkA9QA3HD5gHqOX4AfEANR1Pdw9Q2/F09QAtHE83D9DK8XTxAC0dT3MP0NrxNPUAPRxPMw/Qy/E08QA9HU91D9Db8VT1wEA4nmoeaK4sn1PjZZkM7oCD+rCwbiCenhS1RjMo7tCAHL/l3I3kE4JX6O54imMA5niQQSe+baRryMNikOwYqKuuXrHzzJVwmEEnBK5ARg/okGyQkx9ZHti2acOkHedu5p48fgxu1omaRLo7nqQkZObmt4CRkfF/RFzcQcb/jPNBmu/duc0A88SJtjycQx/UyrBkD6tAHR8PMoCHl5fBNyAIbhbIEwK/P61sam2NoKVDcZlNVBIyd/ebwMDAmA8zBNkTWgIsc918/FIGwvFEJ6HwzMI59+/eTWZkhPj3////DEoqKgzm1taJhdHBWEfM6OUhgjEAcvyDe/eSYQ4H+5qRkUFBSWnuyun9AxbyRBWjyI5HDtHB4ni8SWgoOB6nB4aK43F6wC8+897LF89QZkMGU7IhWBP3L1534OSxI/b3790Fqx2sjscZA/1L1xsw/Ps/Yf+e3XKcXBz7BkNpQ1FFRq8ynRx7CNYD5BhKTz2jHqBnaJPdGh1oR+KzHwB05YZAeHJ4wwAAAABJRU5ErkJggg==" width="48" height="48"></i>
+  <input id="icon_telephone" type="tel" class="validate">
+  <label for="icon_telephone">Telephone</label>
+</div>
+
+</div>
 
 
 
   <div class="row">
-      <form class="col s12">
+      <section class="col s12">
         <div class="row">
           <div class="input-field col s12">
             <textarea id="textarea1" class="materialize-textarea"></textarea>
             <label for="textarea1">Tell us about your trip!</label>
           </div>
         </div>
-      </form>
+        <div class="row" align="center">
+        <button onclick="eraseText()"><a class="btn-floating btn-large waves-effect grey darken-3"><i class="material-icons"><!-- Space Fighter icon by Icons8 -->
+          <img class="icon icons8-Space-Fighter" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACvUlEQVRoQ+2Z/ZFNQRDFz0aACJABESACRIAIEAEyIAJEYEWACMgAESAC6ld1u6q3a77fzOOVO1X7x94703NO95me2/3OdOLj7MTxayfwtyO4MgKXJb3eCD6S9HMF2VUEbkj6IAkSDMDfkfRlNokVBB46z0e8ROLNTBKzCdyT9K4C8L6k81kkUgR+B+OtJKNsMIPHGXYWRuRUxDOTwFdJ1xz5p5Jebv9HWX2TdL0xCkch8FzSMwfovSTk5AdkHrsHLySxrjaOQuCHyzgAwrt42Q8yEs8ubQ/JTFdq6CUtJxDl8VYSz1KDDPTAvWjJSssJkFHuOlClLBOzVEpqkfhyAh8l3XK7IovcrYuMkJuNT5JuV2S0nEBv2p06f0YanQooEY09AuaU3I2c81Dv89rhTeJokdBOYPOAOav1zMR5ewT2M7Bp4J+RUE6jDd9nySkxwsvPwMkRGPXs7HUXItVzD8wGMmpvGYHW2tmAj0rw/yOQ8yzf/FYe4tUnkl416oLa2Ap+lvwKJak3s+xrNJaHbErnjQqNIue7q4vpVlzdiheqMlowfpTK0GUEAAVgH4XGAFyYhvchFJsAubPSfQZKh5ON8fYoCcBTUpZ6pgdHAOPIhTCnal3qXPTsuw21SAAcqXFucjaxR3cjyq07Ah4Mm0KGbkIcEEHfeBR5+UKfuRTwyISIYScFnO4GoGNTzO91EAEzxOYWlUNb5njYvG3t+FIEpxDwG9QklgID0JxEavLrJnDThZVUWBolibGuRSLMIwWbrc9hw24CfgHatL9S5vESY/8WidjBBrj//aA7C9VCyPvYYWtZU5tT6uhl1/Z+gHlD0TN4sPU+SM0dwjK0aGMRCeBBk5dv9nrSpF+TiO+RMmcIy9CiDAFvi3sAMtZmJ+UC3H8utNbGRekdQqCm6aO83wkcxc2FTU4+An8ABkm+Me1mZMQAAAAASUVORK5CYII=" width="48" height="48"></i></a>
+          </a></button>
+        </div>
+
+      </section>
+
     </div>
+  </form>
+
 
 
 

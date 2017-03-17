@@ -9,10 +9,9 @@ body#mainPage{
 
 
 
-
-/*#splash {
-  max-width: 80%;
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-}*/
+#planetHere {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin-bottom: 2em;
+}

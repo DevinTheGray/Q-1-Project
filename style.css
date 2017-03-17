@@ -1,13 +1,18 @@
 
-body .mainPage{
+body#mainPage{
   background-image:
   url("http://vignette3.wikia.nocookie.net/starwars/images/7/72/Hyperspace-SWPuzzle.jpg/revision/latest?cb=20101018151244");
   backround-repeat: no-repeat;
   background-size: cover;
 }
 
-.img-circle {
-    height: 100px
-    width: 100px
-    border-radius: 50%;
-}
+
+
+
+
+/*#splash {
+  max-width: 80%;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}*/

@@ -4,7 +4,17 @@ var matchClimate=[]
 var matchTerrain=[]
 
 $(document).ready(function() {
+
+
+
+
+
+
+
+
     Materialize.updateTextFields();
+
+
 
   $('#dropdown1').click(function(event){
     matchClimate=[]
@@ -25,6 +35,14 @@ $(document).ready(function() {
 
   $('#findPlanet').click(function(event){
     matchedPlanets(matchClimate, matchTerrain)
+
+
+  })
+
+  $('#money').click(function(event){
+    document.querySelector('#getMoney').textContent = " "
+    document.querySelector('#getMoney').append("That will be 3,000,000,000,000 credits please!")
+
   })
 })
 
@@ -98,6 +116,7 @@ function matchedPlanets(matchClimate, matchTerrain){
 $('#textarea1').trigger('autoresize');
 
 
+
 // date picker
 $('.datepicker').pickadate({
    selectMonths: true, // Creates a dropdown to control month
@@ -108,4 +127,12 @@ $('.datepicker').pickadate({
 function eraseText() {
     document.getElementById("output").value = "";
     console.log("alert");
+
+
+}
+
+function ridText(){
+  document.getElementById("chooseP").value = "";
+
+
 }
